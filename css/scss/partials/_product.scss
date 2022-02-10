@@ -1,0 +1,91 @@
+@use '../abstracts/index' as *;
+
+
+.js .slider-single > div:nth-child(1n+2) { display: none }
+
+.js .slider-single.slick-initialized > div:nth-child(1n+2) { display: block }
+
+h3 {
+	background: #f0f0f0;
+	color: #3498db;
+	font-size: 10px;
+	width: 50px;
+	// margin: .5rem;
+	// padding: 2%;
+	position: relative;
+	text-align: center;
+}
+
+.slider-single h3 {
+	line-height: 10rem;
+	width: 400px;
+	height: 300px;
+
+}
+
+.slider-single {
+	width: 400px;
+    height: 300px;
+}
+
+.slider-nav h3::before {
+	content: "";
+	display: block;
+	padding-top: 75%;
+}
+
+.slider-nav h3 span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.slider-nav .slick-slide { 
+	cursor: pointer; 
+	// width: 100px;
+	// height: 100px;
+}
+.slider-nav {
+	margin-top: 35px;
+	width: 400px;
+	height: 200px;
+}
+.slick-slide.is-active h3 {
+	color: #c00;
+	background-color: #fff
+
+}
+
+.slick-slide {
+	width: 100px;
+	height: 100px;
+}
+.slider-nav img {
+	width: 100px;
+	height: 100px;
+
+}
+
+.slick-arrow {
+	border: 1px gray solid !important;
+	border-radius: 50%;
+	color: gray;
+}
+
+button.slick-prev {
+	color: red;
+}
+
+.hero-container {
+	display: flex;
+	justify-content: center;
+}
+
+.hero-image {
+	margin-right: 50px;
+}
+
+.product-details {
+	margin-left: 50px;
+}

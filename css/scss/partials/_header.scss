@@ -1,0 +1,49 @@
+@use '../abstracts/index' as *;
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+    border: 1px red solid;
+    background-color: #F8F8F7;
+    padding: 10px 0px 10px 50px;
+    @media only screen and (min-width: $break-xl) {
+        padding-right: 50px;
+    }
+}
+
+//I added the sticky class for the navbar when the user scrolls down. 
+.sticky {
+      position: fixed;
+      left: 0;
+      right: 0;
+  }
+
+#ul-header {
+    display: flex;
+    list-style-type: none;
+
+}
+
+#ul-header li {
+    padding:  0 20px 0 20px;
+}
+
+#ul-header a {
+    text-transform: uppercase;
+
+}
+
+.header-icons {
+    padding: 10px;
+}
+
+.header-icons a {
+    padding: 10px;
+}
+
+#me {
+    height: 100rem;
+}
+  
