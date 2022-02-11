@@ -1,4 +1,4 @@
-
+//Countdown timer
 var date = new Date();
 var second = date.getSeconds();
 var minute = date.getMinutes();
@@ -40,6 +40,7 @@ function updateTimer() {
 
 
 
+
 //Function to open the size guide
 const sizeModal = document.getElementById('size-modal')
 
@@ -50,4 +51,6 @@ function openCloseModal() {
     sizeModal.style.display = 'block'
   }
 }
+
+
 

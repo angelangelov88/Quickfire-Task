@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
+    <link rel="stylesheet" href="./css/magnify.css">
 
 
     <title>Q Commerce</title>
@@ -56,29 +57,34 @@
         <div class="hero-container">
              <div class="hero-image">
                 <div id="countdown"></div>
+                <div class="magnifying-glass">
+                    <i class="fa-solid fa-magnifying-glass fa-5xl"></i>                
+                </div>
 
                 <div class="slider slider-single">
 
-                    <div><h3>
-                        <img src="./assets/images/image1.jpg" alt="couch-image-1">
-                    </h3></div>
-                    <div><h3>
-                        <img src="./assets/images/image2.jpg" alt="couch-image-2">
-                    </h3></div>
-                    <div><h3>
-                        <img src="./assets/images/image3.jpg" alt="couch-image-3">
-                    </h3></div>
-                    <div><h3>        
-                        <img src="./assets/images/image4.jpg" alt="couch-image-4">
-                    </h3></div>
-                    <!-- <div><h3>
-                        <img src="./assets/images/image5.jpg" alt="couch-image-5">
-                    </h3></div> -->
+                <div><h3>
+                    <img src="./assets/images/image1.jpg" data-magnify-src="./assets/images/image1-big.jpg" alt="couch-image-1" class="magnified-image">
+                </h3></div>
+                <div><h3>
+                    <img src="./assets/images/image2.jpg"  data-magnify-src="./assets/images/image2-big.jpg"alt="couch-image-2" class="magnified-image">
+                </h3></div>
+                <div><h3>
+                    <img src="./assets/images/image3.jpg"  data-magnify-src="./assets/images/image3-big.jpg"alt="couch-image-3" class="magnified-image">
+                </h3></div>
+                <div><h3>        
+                    <img src="./assets/images/image4.jpg"  data-magnify-src="./assets/images/image4-big.jpg"alt="couch-image-4" class="magnified-image">
+                </h3></div>
+                <!-- <div><h3>
+                    <img src="./assets/images/image5.jpg" alt="couch-image-5">
+                </h3></div> -->
+
 
                 </div>
+
                 <div class="slider slider-nav">
                     <div><h3><span>
-                        <img src="./assets/images/Mask Group 3.png" alt="couch-image-1">
+                        <img src="./assets/images/image1.jpg" alt="couch-image-1">
                     </span></h3></div>
                     <div><h3><span>
                         <img src="./assets/images/image2.jpg" alt="couch-image-2">
@@ -254,23 +260,16 @@
            </div>
         </footer>
     </div>
-<!-- JavaScript file -->
-<!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
-
-  <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+<!-- JavaScript files -->
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-  <!-- <script type="text/javascript" src="./assets/slick-1.8.1/slick/slick.min.js"></script> -->
-
-
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-
-
-  <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
   
   <script src="assets/JS/slick.min.js"></script>
+
   <script src="assets/JS/custom.js"></script> 
+
+  <script src="assets/JS/magnify.js"></script> 
+  
   <script src="assets/JS/main.js"></script>
 
 </body>
