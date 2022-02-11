@@ -54,3 +54,17 @@ function openCloseModal() {
 
 
 
+
+
+$(document).ready(function() {
+  $('.magnified-image').magnify();
+});
+
+$(document).ready(function() {
+  $('.magnified-image').magnify({
+    speed: 400,
+    src: 'https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg', 
+    debug: true
+  });
+});
+

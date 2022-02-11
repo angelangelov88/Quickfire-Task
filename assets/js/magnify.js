@@ -72,7 +72,7 @@
           }
           lens.style.opacity = 1;
         });
-  
+          
         container.addEventListener('mouseleave', function () {
           lens.style.opacity = 0;
         });
@@ -119,8 +119,9 @@
           loaded = true;
           lens.className = 'magnify-lens';
           lens.style.background = 'url(' + inst.alter + ') no-repeat';
+
         });
-  
+
         mImg.addEventListener('error', function () {
           errored = true;
           lens.className = 'magnify-lens magnify-error';
@@ -169,16 +170,6 @@
 
 
 
-  $(document).ready(function() {
-    $('.magnified-image').magnify();
-  });
-  
-  $(document).ready(function() {
-    $('.magnified-image').magnify({
-      speed: 400,
-      debug: true
-    });
-  });
   
   
 
