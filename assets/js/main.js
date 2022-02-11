@@ -13,4 +13,14 @@ function myFunction() {
 }
 
 
+//Function to open the size guide
+const sizeModal = document.getElementById('size-modal')
+
+function openCloseModal() {
+  if (sizeModal.style.display == 'block') {
+    sizeModal.style.display = 'none'
+  } else {
+    sizeModal.style.display = 'block'
+  }
+}
 

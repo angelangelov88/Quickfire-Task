@@ -1,5 +1,12 @@
 @use '../abstracts/index' as *;
 
+.page-name-container {
+	margin: 50px 0 20px 30px;
+}
+
+.page-name:hover {
+	text-decoration: underline;
+}
 
 .js .slider-single > div:nth-child(1n+2) { display: none }
 
@@ -10,7 +17,7 @@ h3 {
 	color: #3498db;
 	font-size: 10px;
 	width: 50px;
-	// margin: .5rem;
+	//  margin: 5rem;
 	// padding: 2%;
 	position: relative;
 	text-align: center;
@@ -51,6 +58,7 @@ h3 {
 	width: 400px;
 	height: 200px;
 }
+
 .slick-slide.is-active h3 {
 	color: #c00;
 	background-color: #fff
@@ -64,7 +72,6 @@ h3 {
 .slider-nav img {
 	width: 100px;
 	height: 100px;
-
 }
 
 .slick-arrow {
@@ -84,8 +91,73 @@ button.slick-prev {
 
 .hero-image {
 	margin-right: 50px;
+	margin-top: 22px;
 }
 
 .product-details {
 	margin-left: 50px;
+}
+
+.product-name {
+	font-size: 25px;
+}
+
+.fa-heart:before {
+	font-size: 10px;
+	border: 1px $brand-color solid;
+	border-radius: 50%;
+	padding: 5px;
+}
+
+.product-price {
+	font-size: 25px;
+	font-weight: 600;
+	margin-bottom: -20px;
+}
+
+.product-price-crossed {
+	position: relative;
+	left: 130px;
+	top: -30px;
+	text-decoration: line-through;
+	color: rgb(216, 212, 212);
+}
+
+// .product-size-container {
+
+// }
+
+.product-size-text {
+	font-size: 14px;
+}
+
+.size-button {
+	border: 1px rgb(216, 212, 212) solid;
+	border-radius: 30px;
+	padding: 10px;
+	font-size: 11px;
+	width: 205px;
+}
+
+.size-guide {
+	font-size: 14px;
+	text-decoration: underline;
+}
+
+#size-modal {
+	display: none;
+	position: absolute;
+	top: 231px;
+	border: 2px black solid;
+}
+
+.basket-button {
+	color: white;
+	background-color: $brand-color;
+	padding: 15px;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: 20px;
 }
