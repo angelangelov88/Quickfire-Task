@@ -1,0 +1,97 @@
+@use '../abstracts/index' as *;
+
+.product-extra-titles {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.product-extra-titles li:nth-child(2) {
+    border-bottom: 2px $brand-color solid;
+    padding-bottom: 40px;
+    font-weight: 600;
+}
+
+.product-extra-size-guide {
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px red solid;
+    margin: 150px 0 150px 0;
+    background-color: #F8F8F7;
+}
+
+.product-size-text span {
+    color: gainsboro;
+    border: 1px gainsboro solid;
+    padding: 7px 10px;
+    border-radius: 50%;
+    margin-right: 30px;
+
+}
+
+.product-size-text p {
+    margin: 35px 0 35px 0;
+}
+
+.product-size-image img {
+    width: 500px;
+    height: 300px;
+}
+
+.other-products-container {
+    margin-bottom: 150px;
+    display: flex;
+    flex-direction: column;        
+}
+
+.other-products-container p {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.other-products {
+    display: flex;
+    justify-content: space-between;
+}
+
+.other-product {
+    border: 1px gainsboro solid;
+    max-width: 300px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+.other-products-title {
+    font-weight: 600;
+    margin: 20px;
+    font-size: 15px;
+}
+
+.other-products-price {
+    font-weight: 600;
+    margin: 20px;
+    font-size: 20px;
+
+
+}
+
+.other-products-image img {
+    border-radius: 10px;
+    width: 300px;
+    height: 250px;
+
+}
+
+
+.other-products-button {
+    background-color: #F0F0ED;
+    padding: 20px 0 20px 0;
+    border-radius: 11px;
+    font-weight: 600;
+    font-size: 13px;
+    text-align: center;
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+}
