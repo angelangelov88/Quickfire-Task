@@ -62,9 +62,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $('.magnified-image').magnify({
-    speed: 400,
-    src: 'https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg', 
-    debug: true
-  });
+    speed: 400
+    });
 });
 

@@ -48,6 +48,39 @@ header {
   text-transform: uppercase;
 }
 
+#ul-header p {
+  text-transform: capitalize;
+}
+
+.li-header-1 {
+  border: 1px red solid;
+  z-index: 0;
+}
+
+.li-header-1:hover .dropdown-items-1 {
+  display: block;
+}
+
+.li-header-2:hover .dropdown-items-2 {
+  display: block;
+}
+
+.li-header-3:hover .dropdown-items-3 {
+  display: block;
+}
+
+.li-header-4:hover .dropdown-items-4 {
+  display: block;
+}
+
+.dropdown-items-1,
+.dropdown-items-2,
+.dropdown-items-3,
+.dropdown-items-4 {
+  display: none;
+  border: 1px red solid;
+}
+
 .header-icons {
   padding: 10px;
 }
@@ -415,6 +448,10 @@ button.slick-prev {
   padding: 10px;
 }
 
-.social-logos p {
+.social-logos-links {
   margin: 0 15px 0 15px;
+}
+
+.social-logos-links:hover {
+  color: #949494;
 }/*# sourceMappingURL=style.css.map */

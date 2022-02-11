@@ -52,6 +52,11 @@
     padding: 10px;
 }
 
-.social-logos p {
+.social-logos-links {
     margin: 0 15px 0 15px;
 }
+
+.social-logos-links:hover {
+    color: lighten($color: $brand-color, $amount: 50);
+}
+
