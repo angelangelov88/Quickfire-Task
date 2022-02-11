@@ -1,0 +1,57 @@
+@use '../abstracts/index' as *;
+
+
+.footer-links-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-links li {
+    list-style-type: none;
+    padding-inline-start: 0;
+    line-height: 25px;
+
+}
+
+.footer-links p {
+    line-height: 5px;
+}
+
+.footer-links-title {
+    font-size: 17px;
+    margin-bottom: 60px;
+}
+
+.footer-links {
+    padding-inline-start: 0;
+    font-size: 13px;
+
+}
+
+#footer-phone {
+    font-weight: 600;
+    line-height: 30px;
+}
+
+#footer-email {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    font-size: 13px;
+}
+
+.social-logos {
+    display: flex;
+    padding: 10px;
+}
+
+.social-logos p {
+    margin: 0 15px 0 15px;
+}

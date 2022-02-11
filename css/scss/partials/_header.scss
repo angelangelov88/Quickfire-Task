@@ -5,20 +5,25 @@ header {
     display: flex;
     justify-content: space-between;
     margin: 0 0 20px 0;
-    border: 1px red solid;
     background-color: #F8F8F7;
     padding: 10px 0px 10px 50px;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     @media only screen and (min-width: $break-xl) {
         padding-right: 50px;
     }
 }
 
 //I added the sticky class for the navbar when the user scrolls down. 
-.sticky {
-      position: fixed;
-      left: 0;
-      right: 0;
-  }
+// .sticky {
+//       position: fixed;
+//       top: 0;
+//       left: 0;
+//       right: 0;
+//   }
 
 #ul-header {
     display: flex;

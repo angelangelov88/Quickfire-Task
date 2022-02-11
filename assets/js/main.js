@@ -1,16 +1,43 @@
-//This is the function I used to make the navbar sticky. It allows the user to see the navbar even if not on top of the page. I have styled it differently so it looks nice.
-window.onscroll = function() {myFunction()};
 
-var header = document.querySelector("header");
-var sticky = header.offsetTop;
+var date = new Date();
+var second = date.getSeconds();
+var minute = date.getMinutes();
+var hour = date.getHours();
+var day = date.getDay();
+var month = date.getMonth();
+var year = date.getFullYear();
 
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-} else {
-    header.classList.remove("sticky");
+var leftHour = 23 - hour;
+var leftMinute = 59 - minute;
+var leftSeconds = 59 - second;
+
+
+var leftTime = (leftHour * 3600) + (leftMinute * 60) + leftSeconds;
+var timer = document.getElementById('countdown');
+
+setInterval(updateTimer, 1000);
+
+function updateTimer() {
+    var h = Math.floor(leftTime / 3600);
+    var m = Math.floor((leftTime - (h * 3600)) / 60);
+    var s = Math.floor(leftTime % 60);
+
+
+    h = (h < 10) ? "0" + h: h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+
+    timer.innerHTML =  "Order in the next <b>" 
+    + h 
+    + ":" 
+    + m 
+    + ":" 
+    + (s) 
+    + "</b> for next day delivery";
+
+    leftTime--;
 }
-}
+
 
 
 //Function to open the size guide

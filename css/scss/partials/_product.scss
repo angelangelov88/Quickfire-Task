@@ -25,14 +25,24 @@ h3 {
 
 .slider-single h3 {
 	line-height: 10rem;
-	width: 400px;
-	height: 300px;
+	width: 600px;
+	height: 400px;
 
 }
 
 .slider-single {
-	width: 400px;
-    height: 300px;
+	width: 600px;
+    height: 400px;
+}
+
+#countdown {
+	position: absolute;
+	top: 191px;
+	background-color: rgba($color: #f3e2d1, $alpha: .5);
+	z-index: 1;
+	padding: 10px;
+	text-align: center;
+	width: 580px;
 }
 
 .slider-nav h3::before {
@@ -86,11 +96,10 @@ button.slick-prev {
 
 .hero-container {
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 }
 
 .hero-image {
-	margin-right: 50px;
 	margin-top: 22px;
 }
 

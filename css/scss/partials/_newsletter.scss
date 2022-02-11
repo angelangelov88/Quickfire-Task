@@ -1,0 +1,38 @@
+@use '../abstracts/index' as *;
+
+.newsletter-container {
+    background-color: $brand-color;
+    margin-bottom: 150px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-text {
+    color: white;
+    margin: 0 40px;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.newsletter-input input{
+    padding: 15px 20px 15px 20px;
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+    font-size: 15px;
+}
+
+.newsletter-input input:focus {
+    outline: none;
+
+}
+
+.newsletter-arrow {
+    border: 1px white solid;
+    color: white;
+    margin-left: 20px;
+    padding: 13px 20px;
+    border-radius: 5px;
+}
