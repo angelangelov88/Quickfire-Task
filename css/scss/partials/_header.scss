@@ -3,28 +3,65 @@
 
 header {
     display: flex;
-    justify-content: space-between;
-    margin: 0 0 20px 0;
-    background-color: #F8F8F7;
-    padding: 10px 0px 10px 50px;
-    z-index: 100;
+    justify-content: space-around;
+    align-items: flex-start;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    @media only screen and (min-width: $break-xl) {
-        padding-right: 50px;
+    right: 0;        
+    z-index: 100;
+    background-color: #F8F8F7;
+
+    @media only screen and (min-width: $break-l) {
+        justify-content: space-between;
+        margin: 0 0 20px 0;
+        padding: 10px 50px 10px 50px;
     }
 }
 
+#header-logo img {
+    height: auto;
+    width: 115px;
+    padding-top: 10px;
+    @media only screen and (min-width: $break-s) {
+        width: auto;
+    }
+}
+
+#header-small {
+    display: block;
+    @media only screen and (min-width: $break-l) {
+        display: none;
+    }
+}
+
+.btn-menu-xs {
+    display: block;
+    @media only screen and (min-width: $break-l) {
+        display: none;
+    }
+
+}
+
 #ul-header {
-    display: flex;
+    display: none;
     list-style-type: none;
+    @media only screen and (min-width: $break-l) {
+        display: flex;
+    }
 
 }
 
 #ul-header li {
-    padding:  0 20px 0 20px;
+    padding:  0 17px 0 17px;
+}
+
+#ul-header li:last-child {
+    padding-right: 0;
+}
+
+#ul-header li:first-child {
+    padding-left: 0;
 }
 
 #ul-header a {
@@ -36,8 +73,12 @@ header {
 }
 
 .li-header-1 {
-    border: 1px red solid;
+    // border: 1px blue solid;
     z-index: 0;
+}
+
+header:hover {
+    background-color: rgba($color: #F0F0ED, $alpha: 0.8);
 }
 
 .li-header-1:hover {
@@ -45,6 +86,8 @@ header {
         display: block;
     }
 }
+
+
 .li-header-2:hover {
     .dropdown-items-2 {
         display: block;
@@ -67,11 +110,15 @@ header {
 .dropdown-items-3,
 .dropdown-items-4 {
     display: none;
-    border: 1px red solid;
+    // border: 1px red solid;
 }
 
 .header-icons {
-    padding: 10px;
+    display: flex;
+    @media only screen and (min-width: $break-l) {
+        padding: 10px;
+    }
+
 }
 
 .header-icons a {
@@ -81,4 +128,87 @@ header {
 #me {
     height: 100rem;
 }
+
+.blocker {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
   
+  //I added an extra html for the header for small screens. This one works only on small screens and change to display:none for bigger. This is basically the hamburger dropdown
+  #header-small {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    background-color: rgba($brand-color, 0.8);
+    position: absolute;
+    top: 73px;
+    right: 0;
+    border-radius: 4px;
+    display: none;
+    z-index: 2;
+    @media only screen and (min-width: $break-m) {
+      display: none;
+  }
+  }
+  
+  //Some styling that could not go in the #header-small
+  #header-small ul {
+    list-style-type: none;
+    text-align: end;
+    padding-right: 10px;
+  }
+  
+  //Separating the li elements on small screen (the drop down)
+  .li-header-small {
+    line-height: 45px;
+  }
+  
+  //Hamburger styling
+  .btn-menu-xs {
+    background-color: $brand-color;
+    height: 55px;
+    width: 65px;
+    border-radius: 4px;
+    z-index: 1;
+    @media only screen and (min-width: $break-l) {
+      display: none;
+  }
+  }
+  
+  .btn-menu-xs:hover {
+    background-color: $brand-color;
+    cursor: pointer;
+  }
+  
+  // The next few properties are for the hamburger
+  .menu-lines {
+    padding: 10px 0 4px 16px;
+  }
+  
+  .menu-x {
+    display: none;
+    color: white;
+    font-size: 40px;
+    margin-top: 0px;
+    margin-left: 21px;
+  }
+  
+  .menu-line {
+    width: 33px;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 5px;
+  }
+  
+  .menu-title {
+    font-size: 12px;
+    text-align: center;
+    margin-top: -7px;
+    color: white;
+    font-weight: 600;
+  }

@@ -31,28 +31,54 @@ h3 {
 }
 
 .slider-single {
+	width: auto;
+	height: auto;
+	@media only screen and (min-width: $break-m) {
+
 	width: 600px;
     height: 400px;
+}
 }
 
 #countdown {
 	position: absolute;
-	top: 191px;
+	top: 10px;
 	background-color: rgba($color: #f3e2d1, $alpha: .5);
 	z-index: 1;
 	padding: 10px;
 	text-align: center;
-	width: 580px;
+	// width: 480px;
+	@media only screen and (min-width: $break-m) {
+		// max-width: 580px;
+		width: 560px;
+
+	}
+}
+
+.slick-slider {
+	// margin-right: auto;
+    // margin-left: auto;
+	// max-width: 80%;
+	// width: auto;
+	// height: auto;
+	@media only screen and (min-width: $break-m) {
+		max-width: 580px;
+	}
 }
 
 .magnifying-glass {
 	position: absolute;
-	bottom: 19%;
-	left: 48%;
+	bottom: 20%;
+	left: 80%;
 	z-index: 10;
 	padding: 12px 15px;
 	border-radius: 50%;
 	background-color: rgba($color: gainsboro, $alpha: .5);
+
+	@media only screen and (min-width: $break-m) {
+		left: 90%;
+
+}
 }
 
 .slider-nav h3::before {
@@ -75,8 +101,12 @@ h3 {
 }
 .slider-nav {
 	margin-top: 35px;
-	width: 400px;
-	height: 200px;
+
+	@media only screen and (min-width: $break-l) {
+
+	//  width: 400px;
+	 height: 200px;
+	}
 }
 
 .slick-slide.is-active h3 {
@@ -91,7 +121,15 @@ h3 {
 }
 .slider-nav img {
 	width: 100px;
-	height: 100px;
+	// height: 100px;
+}
+
+.slick-prev,
+.slick-next {
+	display: none !important;
+	@media only screen and (min-width: $break-s) {
+		display: block !important;
+	}
 }
 
 .slick-arrow {
@@ -100,21 +138,41 @@ h3 {
 	color: gray;
 }
 
-button.slick-prev {
-	color: red;
-}
-
 .hero-container {
 	display: flex;
-	justify-content: space-around;
+	flex-direction: column;
+	@media only screen and (min-width: $break-l) {
+		flex-direction: row;
+		justify-content: space-around;
+}
 }
 
 .hero-image {
+	position: relative;
 	margin-top: 22px;
+	margin-right: auto;
+    margin-left: auto;
+	max-width: 250px;
+	border: 1px red solid;
+	width: auto;
+	height: 500px;
+	@media only screen and (min-width: $break-m) {
+		max-width: 580px;
+}
 }
 
+
 .product-details {
-	margin-left: 50px;
+	margin-right: auto;
+    margin-left: auto;
+	// min-width: 600px;
+	padding-left: 10px;
+	@media only screen and (min-width: $break-l) {
+		margin-left: 50px;
+		margin-right: initial;
+		min-width: initial;
+}
+
 }
 
 .product-name {
@@ -136,15 +194,16 @@ button.slick-prev {
 
 .product-price-crossed {
 	position: relative;
-	left: 130px;
-	top: -30px;
+	top: -22px;
 	text-decoration: line-through;
 	color: rgb(216, 212, 212);
+
+	@media only screen and (min-width: $break-m) {
+		left: 130px;
+
+	
 }
-
-// .product-size-container {
-
-// }
+}
 
 .product-size-text {
 	font-size: 14px;
@@ -161,13 +220,34 @@ button.slick-prev {
 .size-guide {
 	font-size: 14px;
 	text-decoration: underline;
+	margin-top: 20px;
 }
 
 #size-modal {
 	display: none;
 	position: absolute;
-	top: 222px;
+	top: 960px;
 	border: 2px black solid;
+	@media only screen and (min-width: $break-s) {
+		top: 930px;
+	}
+	@media only screen and (min-width: $break-m) {
+		top: 827px;
+	}
+	@media only screen and (min-width: $break-l) {
+		top: 310px;
+}
+}
+
+#size-modal img {
+	width: 250px;
+	@media only screen and (min-width: $break-s) {
+		width: 300px;
+	}
+	@media only screen and (min-width: $break-m) {
+		width: initial;
+	}
+
 }
 
 .basket-button {
@@ -179,4 +259,5 @@ button.slick-prev {
 	font-size: 14px;
 	font-weight: 600;
 	margin-top: 20px;
+	max-width: 200px;
 }

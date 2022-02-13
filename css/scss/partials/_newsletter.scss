@@ -3,25 +3,45 @@
 .newsletter-container {
     background-color: $brand-color;
     margin-bottom: 150px;
-    height: 120px;
+    height: 220px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
+
+    @media only screen and (min-width: $break-m) {
+        flex-direction: row;
+        height: 120px;
+
+}
 }
 
 .newsletter-text {
+
     color: white;
     margin: 0 40px;
-    font-size: 23px;
+    font-size: 18px;
     font-weight: 600;
+    margin: 20px;
+    @media only screen and (min-width: $break-l) {
+        font-size: 23px;
+
+    }
+    
+    
 }
 
 .newsletter-input input{
     padding: 15px 20px 15px 20px;
     border-radius: 5px;
     border: none;
-    width: 300px;
+    width: 170px;
     font-size: 15px;
+    margin: 20px;
+    @media only screen and (min-width: $break-xs) {
+        width: 300px;
+    }
 }
 
 .newsletter-input input:focus {
@@ -29,10 +49,13 @@
 
 }
 
-.newsletter-arrow {
+#newsletter-arrow {
     border: 1px white solid;
     color: white;
+    font-weight: 600;
     margin-left: 20px;
     padding: 13px 20px;
     border-radius: 5px;
+    background-color: $brand-color;
+    cursor: pointer;
 }

@@ -3,30 +3,50 @@
 
 .footer-links-container {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    padding-left: 20px;
+    @media only screen and (min-width: $break-m) {
+        justify-content: space-around;
+        flex-direction: row;
+
+    }
 }
 
-.footer-links li {
-    list-style-type: none;
-    padding-inline-start: 0;
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     line-height: 25px;
-
 }
+
 
 .footer-links p {
+
     line-height: 5px;
 }
 
 .footer-links-title {
-    font-size: 17px;
-    margin-bottom: 60px;
+    font-size: 19px;
+    margin-bottom: 10px;
+    margin-top: 25px;
+
+    @media only screen and (min-width: $break-m) {
+        font-size: 17px;
+        margin-bottom: 60px;
+        margin-top: 0;
+
+    }
+
 }
 
 .footer-links {
     padding-inline-start: 0;
-    font-size: 13px;
-
+    font-size: 15px;
+    @media only screen and (min-width: $break-m) {
+        font-size: 13px;
+    }
 }
+
 
 #footer-phone {
     font-weight: 600;

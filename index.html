@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- My style sheet compiled to CSS from SASS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"/>
 <!-- Added Font Awesome CDN to show the arrow on the buttons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
 
@@ -14,49 +14,57 @@
 
     <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
-    <link rel="stylesheet" href="./css/magnify.css">
+    <link rel="stylesheet" href="./css/magnify.css"/>
 
 
     <title>Q Commerce</title>
 </head>
 <body>
     <header>
-        <a href="#">
+        <a href="#" id="header-logo">
             <img src="./assets/images/logo.PNG" alt="logo">
         </a>
         <ul id="ul-header">
-            <li class="li-header li-header-1"><a href="#">Menu Item &nbsp;
-                <i class="fa-solid fa-chevron-down"></i>
+            <li class="li-header li-header-1">
+                <a href="#">Menu Item 1 &nbsp;
+                    <i class="fa-solid fa-chevron-down"></i>
                     <p class="dropdown-items-1">Lorem Ipsum</p>
                     <p class="dropdown-items-1">Lorem Ipsum</p>
                     <p class="dropdown-items-1">Lorem Ipsum</p>
                     <p class="dropdown-items-1">Lorem Ipsum</p>
                     <p class="dropdown-items-1">Lorem Ipsum</p>
-            </a></li>
-            <li class="li-header li-header-2"><a href="#">Menu Item &nbsp;
-                <i class="fa-solid fa-chevron-down"></i>
-                <p class="dropdown-items-2">Lorem Ipsum</p>
-                <p class="dropdown-items-2">Lorem Ipsum</p>
-                <p class="dropdown-items-2">Lorem Ipsum</p>
-                <p class="dropdown-items-2">Lorem Ipsum</p>
-                <p class="dropdown-items-2">Lorem Ipsum</p>
-            </a></li>
-            <li class="li-header li-header-3"><a href="#">Menu Item &nbsp;
-                <i class="fa-solid fa-chevron-down"></i>
-                <p class="dropdown-items-3">Lorem Ipsum</p>
-                <p class="dropdown-items-3">Lorem Ipsum</p>
-                <p class="dropdown-items-3">Lorem Ipsum</p>
-                <p class="dropdown-items-3">Lorem Ipsum</p>
-                <p class="dropdown-items-3">Lorem Ipsum</p>
-            </a></li>
-            <li class="li-header li-header-4"><a href="#">Menu Item &nbsp;
-                <i class="fa-solid fa-chevron-down"></i>
-                <p class="dropdown-items-4">Lorem Ipsum</p>
-                <p class="dropdown-items-4">Lorem Ipsum</p>
-                <p class="dropdown-items-4">Lorem Ipsum</p>
-                <p class="dropdown-items-4">Lorem Ipsum</p>
-                <p class="dropdown-items-4">Lorem Ipsum</p>
-            </a></li>
+                </a>
+            </li>
+            <li class="li-header li-header-2">
+                <a href="#">Menu Item 2 &nbsp;
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <p class="dropdown-items-2">Lorem Ipsum</p>
+                    <p class="dropdown-items-2">Lorem Ipsum</p>
+                    <p class="dropdown-items-2">Lorem Ipsum</p>
+                    <p class="dropdown-items-2">Lorem Ipsum</p>
+                    <p class="dropdown-items-2">Lorem Ipsum</p>
+                </a>
+            </li>
+            <li class="li-header li-header-3">
+                <a href="#">Menu Item 3 &nbsp;
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <p class="dropdown-items-3">Lorem Ipsum</p>
+                    <p class="dropdown-items-3">Lorem Ipsum</p>
+                    <p class="dropdown-items-3">Lorem Ipsum</p>
+                    <p class="dropdown-items-3">Lorem Ipsum</p>
+                    <p class="dropdown-items-3">Lorem Ipsum</p>
+                </a>
+            </li>
+            <li class="li-header li-header-4">
+                <a href="#">Menu Item 4 &nbsp;
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <p class="dropdown-items-4">Lorem Ipsum</p>
+                    <p class="dropdown-items-4">Lorem Ipsum</p>
+                    <p class="dropdown-items-4">Lorem Ipsum</p>
+                    <p class="dropdown-items-4">Lorem Ipsum</p>
+                    <p class="dropdown-items-4">Lorem Ipsum</p>
+                </a>
+            </li>
         </ul>
         <div class="header-icons">
             <a href="#" class="header-account">
@@ -66,227 +74,260 @@
                 <i class="fa-solid fa-cart-shopping fa-xl"></i>
             </a>
         </div>
-    </header>
-    <div class="main-container">
-        <div class="page-name-container">
-            <p class="page-name">
-                <a href="#">
-                    Breadcrumb > Breadcrumb
+
+        <!-- I added the blocker div to allow the user click anywhere in order to close the hamburger dropdown when shows on small screens -->
+        <div class="blocker" onclick="openCloseNav()"></div>
+
+      <!-- Extra code for the drop down hamburger menu on small screen sizes -->
+        <div id="header-small">
+            <ul>
+            <li class="li-header-small">
+                <a href="#">Menu Item 1 &nbsp;
                 </a>
-                </p>
-        </div>
-        <div class="hero-container">
-             <div class="hero-image">
-                <div id="countdown"></div>
-                <div class="magnifying-glass">
-                    <i class="fa-solid fa-magnifying-glass fa-5xl"></i>                
-                </div>
-
-                <div class="slider slider-single">
-
-                <div><h3>
-                    <img src="assets/images/image1.jpg" data-magnify="./assets/images/image1-big.jpg" alt="couch-image-1" class="magnified-image">
-                </h3></div>
-                <div><h3>
-                    <img src="./assets/images/image2.jpg"  data-magnify="./assets/images/image2-big.jpg" alt="couch-image-2" class="magnified-image">
-                </h3></div>
-                <div><h3>
-                    <img src="./assets/images/image3.jpg"  data-magnify="./assets/images/image3-big.jpg" alt="couch-image-3" class="magnified-image">
-                </h3></div>
-                <div><h3>        
-                    <img src="./assets/images/image4.jpg"  data-magnify="./assets/images/image4-big.jpg" alt="couch-image-4" class="magnified-image">
-                </h3></div>
-                <!-- <div><h3>
-                    <img src="./assets/images/image5.jpg" alt="couch-image-5">
-                </h3></div> -->
-
-
-                </div>
-
-                <div class="slider slider-nav">
-                    <div><h3><span>
-                        <img src="./assets/images/image1.jpg" alt="couch-image-1">
-                    </span></h3></div>
-                    <div><h3><span>
-                        <img src="./assets/images/image2.jpg" alt="couch-image-2">
-                    </span></h3></div>
-                    <div><h3><span>
-                        <img src="./assets/images/image3.jpg" alt="couch-image-3">
-                    </span></h3></div>
-                    <div><h3><span>
-                        <img src="./assets/images/image4.jpg" alt="couch-image-4">
-                    </span></h3></div>
-                    <!-- <div><h3><span>
-                        <img src="./assets/images/image5.jpg" alt="couch-image-5">
-                    </span></h3></div> -->
-                </div>
-            </div>
-            <div class="product-details">
-                <p class="product-name">Montreal Leather Sofa&nbsp;&nbsp;
-                    <a href="#"><i class="fa-solid fa-heart fa-xs"></i></a>
-                </p>
-                <p class="product-price">£649.00
-                    <p class="product-price-crossed">£949.00</p></p>
-                <div class="product-colour-container">
-                    <img src="./assets/images/Group 13.png"  alt="poduct-colours">
-                </div>
-                <div class="product-size-container">
-                    <p class="product-size-text">Size:</p>
-                    <a href="#" class="size-button"><b>2 Seater</b> | 180cm (w) x 80cm (d)
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </a>
-                    <p class="size-guide">
-                        <a href="#" onclick="openCloseModal()">
-                        Size Guide</a>
-                        <p id="size-modal">
-                            <img src="./assets/images/size-image.png"  alt="product-size-chart">
-                        </p>
-                    </p>
-                </div>
-                <div class="basket-button">Add to Basket</div>
-            </div>
-        </div>
-        <div class="product-extra">
-            <ul class="product-extra-titles">
-                <li><a href="#">Product Description</a></li>
-                <li><a href="#">Size Guide</a></li>
-                <li><a href="#">Delivery & Returns</a></li>
-                <li><a href="#">Reviews</a></li>
+            </li>
+            <li class="li-header-small">
+                <a href="#">Menu Item 2 &nbsp;
+                </a>
+            </li>
+            <li class="li-header-small">
+                <a href="#">Menu Item 3 &nbsp;
+                </a>
+            </li>
+            <li class="li-header-small">
+                <a href="#">Menu Item 4 &nbsp;
+                </a></li>
+            <li class="li-header-small">
+                <a href="#">Menu Item 5 &nbsp;
+                </a>
+            </li>
             </ul>
-            <div class="product-extra-description"></div>
-            <div class="product-extra-size-guide">
-                <div class="product-size-text">
-                    <p><span>A</span>Width: <b>189cm</b></p> 
-                    <p><span>B</span>Depth: <b>98cm</b></p> 
-                    <p><span>C</span>Height under furniture: <b>7cm</b></p> 
-                    <p><span>D</span>Seath width: <b>141cm</b></p> 
-                    <p><span>E</span>Backrest height: <b>76cm</b></p> 
-             
-                </div>
-                <div class="product-size-image">
-                    <img src="./assets/images/product-size-image.PNG">
-                </div>
-            </div>
-            <div class="product-extra-delivery"></div>
-            <div class="product-extra-reviews"></div>
         </div>
-        <div class="other-products-container">
-            <p>You might be also interested in...</p>
-            <div class="other-products">
-                <div class="other-product">
-                    <div class="other-products-image">
-                        <img src="./assets/images/other-products-1.PNG" alt="other-product-image">
-                    </div>
-                    <div class="other-products-title">Lorem Insum Double Bed</div>
-                    <div class="other-products-price">£649.00</div>
-                    <div class="other-products-button">View Item</div>
-                </div>
-                <div class="other-product">
-                    <div class="other-products-image">
-                        <img src="./assets/images/other-products-1.PNG" alt="other-product-image">
-                    </div>
-                    <div class="other-products-title">Lorem Insum Double Bed</div>
-                    <div class="other-products-price">£649.00</div>
-                    <div class="other-products-button">View Item</div>
-                </div>
-                <div class="other-product">
-                    <div class="other-products-image">
-                        <img src="./assets/images/other-products-1.PNG" alt="other-product-image">
-                    </div>
-                    <div class="other-products-title">Lorem Insum Double Bed</div>
-                    <div class="other-products-price">£649.00</div>
-                    <div class="other-products-button">View Item</div>
-                </div>
-                <div class="other-product">
-                    <div class="other-products-image">
-                        <img src="./assets/images/other-products-1.PNG" alt="other-product-image">
-                    </div>
-                    <div class="other-products-title">Lorem Insum Double Bed</div>
-                    <div class="other-products-price">£649.00</div>
-                    <div class="other-products-button">View Item</div>
-                </div>
+      
+      <!-- Hamburger menu itself -->
+        <div class="btn-menu-xs" onclick="openCloseNav()">
+            <div class="menu-lines">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>	
             </div>
+            <div class="menu-x">x</div>
+                <p class="menu-title">MENU</p>						
         </div>
-        <div class="newsletter-container">
-            <div class="newsletter-text">Get 10% off. Sign up today.</div>
-            <div class="newsletter-input">
-                <input placeholder="Enter your email address">
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="page-name-container">
+                <p class="page-name">
+                    <a href="#">Breadcrumb > Breadcrumb</a>
+                </p>
             </div>
-            <div class="newsletter-arrow">
-                <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+            <div class="hero-container">
+                <div class="hero-image">
+                    <div id="countdown"></div>
+                    <div class="magnifying-glass">
+                        <i class="fa-solid fa-magnifying-glass fa-5xl"></i>                
+                    </div>
+                    <div class="slider slider-single">
+                        <div><h3>
+                            <img src="assets/images/image1.jpg" data-magnify="./assets/images/image1-big.jpg" alt="couch-image-1" class="magnified-image">
+                        </h3></div>
+                        <div><h3>
+                            <img src="./assets/images/image2.jpg"  data-magnify="./assets/images/image2-big.jpg" alt="couch-image-2" class="magnified-image">
+                        </h3></div>
+                        <div><h3>
+                            <img src="./assets/images/image3.jpg"  data-magnify="./assets/images/image3-big.jpg" alt="couch-image-3" class="magnified-image">
+                        </h3></div>
+                        <div><h3>        
+                            <img src="./assets/images/image4.jpg"  data-magnify="./assets/images/image4-big.jpg" alt="couch-image-4" class="magnified-image">
+                        </h3></div>
+                    </div>
+                    <div class="slider slider-nav">
+                        <div><h3><span>
+                            <img src="./assets/images/image1.jpg" alt="couch-image-1">
+                        </span></h3></div>
+                        <div><h3><span>
+                            <img src="./assets/images/image2.jpg" alt="couch-image-2">
+                        </span></h3></div>
+                        <div><h3><span>
+                            <img src="./assets/images/image3.jpg" alt="couch-image-3">
+                        </span></h3></div>
+                        <div><h3><span>
+                            <img src="./assets/images/image4.jpg" alt="couch-image-4">
+                        </span></h3></div>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <p class="product-name">Montreal Leather Sofa&nbsp;&nbsp;
+                        <a href="#"><i class="fa-solid fa-heart fa-xs"></i></a>
+                    </p>
+                    <div class="product-price">£649.00
+                        <p class="product-price-crossed">£949.00</p>
+                    </div>
+                    <div class="product-colour-container">
+                        <img src="./assets/images/Group-13.png"  alt="poduct-colours">
+                    </div>
+                    <div class="product-size-container">
+                        <p class="product-size-text">Size:</p>
+                        <a href="#" class="size-button"><b>2 Seater</b> | 180cm (w) x 80cm (d)
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                        <div class="size-guide">
+                            <a href="#" onclick="openCloseModal()">
+                            Size Guide</a>
+                            <p id="size-modal">
+                                <img src="./assets/images/size-image.png"  alt="product-size-chart">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="basket-button">Add to Basket</div>
+                </div>
             </div>
-        </div>
+            <div class="product-extra">
+                <ul class="product-extra-titles">
+                    <li><a href="#">Product Description</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Delivery & Returns</a></li>
+                    <li><a href="#">Reviews</a></li>
+                </ul>
+                <div class="product-extra-description"></div>
+                <div class="product-extra-size-guide">
+                    <div class="product-size-text">
+                        <p><span>A</span>Width: <b>189cm</b></p> 
+                        <p><span>B</span>Depth: <b>98cm</b></p> 
+                        <p><span>C</span>Height under furniture: <b>7cm</b></p> 
+                        <p><span>D</span>Seath width: <b>141cm</b></p> 
+                        <p><span>E</span>Backrest height: <b>76cm</b></p> 
+                
+                    </div>
+                    <div class="product-size-image">
+                        <img src="./assets/images/product-size-image.PNG" alt="product-size-image">
+                    </div>
+                </div>
+                <div class="product-extra-delivery"></div>
+                <div class="product-extra-reviews"></div>
+            </div>
+            <div class="other-products-container">
+                <p>You might be also interested in...</p>
+                <div class="other-products">
+                    <div class="other-product">
+                        <div class="other-products-image">
+                            <img src="./assets/images/other-products-1.PNG" alt="other-product-image">
+                        </div>
+                        <div class="other-products-title">Lorem Insum Double Bed</div>
+                        <div class="other-products-price">£649.00</div>
+                        <div class="other-products-button">View Item</div>
+                    </div>
+                    <div class="other-product">
+                        <div class="other-products-image">
+                            <img src="./assets/images/other-products-1.PNG" alt="other-product-image">
+                        </div>
+                        <div class="other-products-title">Lorem Insum Double Bed</div>
+                        <div class="other-products-price">£649.00</div>
+                        <div class="other-products-button">View Item</div>
+                    </div>
+                    <div class="other-product">
+                        <div class="other-products-image">
+                            <img src="./assets/images/other-products-1.PNG" alt="other-product-image">
+                        </div>
+                        <div class="other-products-title">Lorem Insum Double Bed</div>
+                        <div class="other-products-price">£649.00</div>
+                        <div class="other-products-button">View Item</div>
+                    </div>
+                    <div class="other-product">
+                        <div class="other-products-image">
+                            <img src="./assets/images/other-products-1.PNG" alt="other-product-image">
+                        </div>
+                        <div class="other-products-title">Lorem Insum Double Bed</div>
+                        <div class="other-products-price">£649.00</div>
+                        <div class="other-products-button">View Item</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <form onsubmit="alertFunction()" class="newsletter-container">
+                    <div class="newsletter-text">Get 10% off. Sign up today.</div>
+                    <div class="newsletter-input">
+                        <input placeholder="Enter your email address" required type="email" id="input-email">
+                    </div>
+                    <div>
+                        <input id="newsletter-arrow" type="submit" value=">">
+                    </div>
+                </form>
+            </div>
         <footer>
-           <div class="footer-links-container">
-                <a href="#" class="footer-logo">
-                    <img src="./assets/images/footer-logo.PNG">
-                </a>
-                <div class="footer-link-container">
-                    <div class="footer-links-title">QF Commerce</div>
-                    <ul class="footer-links">
-                        <a href="#"><li>New Releases</li></a>
-                        <a href="#"><li>Shop All</li></a>
-                        <a href="#"><li>Shop by Filter</li></a>
-                        <a href="#"><li>Lorem Ipsum</li></a>
-                        <a href="#"><li>Lorem Ipsum</li></a>
-                        <a href="#"><li>Lorem Ipsum</li></a>
-                        <a href="#"><li>Lorem Ipsum</li></a>                      
-                    </ul>
-                </div>
-                <div class="footer-link-container">
-                    <div class="footer-links-title">Information</div>
-                    <ul class="footer-links">
-                        <a href="#"><li>Lorem Ipsum</li></a>
-                        <a href="#"><li>Lorem Ipsum</li></a>
-                        <a href="#"><li>Contact Us</li></a>
-                        <a href="#"><li>About Us</li></a>
-                        <a href="#"><li>Careers</li></a>
-                        <a href="#"><li>Lorem Ipsum</li></a>
-                    </ul>
-                </div>
-                <div class="footer-link-container">
-                    <div class="footer-links-title">Important</div>
-                    <ul class="footer-links">
-                        <a href="#"><li>Delivery & Returns</li></a>
-                        <a href="#"><li>Cookie Policy</li></a>
-                        <a href="#"><li>Privacy Policy</li></a>
-                        <a href="#"><li>Terms & Conditions</li></a>
-                        <a href="#"><li>Sitemap</li></a>
-                    </ul>
-                </div>
-                <div class="footer-link-container">
-                    <div class="footer-links-title">Get in touch</div>
-                    <ul class="footer-links">
-                        <p>Address Line Here</p>
-                        <p>Address Line Here</p>
-                        <p>Address Line Here</p>
-                        <p>Address Line Here</p>
-                        <a href="tel:01234567890"><p id="footer-phone">01234 567890</p></a>
-                        <a href="mailto:hello@qfcommerce.com"><p id="footer-email">hello@qfcommerce.com</p></a>
-                    </ul>
-                </div>
-                <div class="footer-links"></div>
-                <div class="footer-links"></div>
-           </div>
-           <div class="socials">
-               <div class="copyright">
-                    <p>&copy; QF Commerce 2022</p>
-               </div>
-               <div class="social-logos">
-                   <a href="#" class="social-logos-links">
-                        <i class="fa-brands fa-facebook fa-xl">
-                   </i></a>
-                   <a href="#" class="social-logos-links">
-                    <i class="fa-brands fa-instagram fa-xl">
-                        </i></a>
-                    <a href="#" class="social-logos-links">
-                        <i class="fa-brands fa-linkedin-in fa-xl">
-                    </i></a>
-               </div>
+            <div class="footer-links-container">
+                    <a href="#" class="footer-logo">
+                        <img src="./assets/images/footer-logo.PNG" alt="footer-logo">
+                    </a>
 
-           </div>
-        </footer>
-    </div>
+                        <div class="footer-link-container">
+                            <div class="footer-links-title">QF Commerce</div>
+                            <div class="footer-links">
+                                <a href="#">New Releases</a>
+                                <a href="#">Shop All</a>
+                                <a href="#">Shop by Filter</a>
+                                <a href="#">Lorem Ipsum</a>
+                                <a href="#">Lorem Ipsum</a>
+                                <a href="#">Lorem Ipsum</a>
+                                <a href="#">Lorem Ipsum</a>                      
+                            </div>
+                        </div>
+                        <div class="footer-link-container">
+                            <div class="footer-links-title">Information</div>
+                            <div class="footer-links">
+                                <a href="#">Lorem Ipsum</a>
+                                <a href="#">Lorem Ipsum</a>
+                                <a href="#">Contact Us</a>
+                                <a href="#">About Us</a>
+                                <a href="#">Careers</a>
+                                <a href="#">Lorem Ipsum</a>
+                            </div>
+                        </div>
+
+                        <div class="footer-link-container">
+                            <div class="footer-links-title">Important</div>
+                            <div class="footer-links">
+                                <a href="#">Delivery & Returns</a>
+                                <a href="#">Cookie Policy</a>
+                                <a href="#">Privacy Policy</a>
+                                <a href="#">Terms & Conditions</a>
+                                <a href="#">Sitemap</a>
+                            </div>
+                        </div>
+                        <div class="footer-link-container">
+                            <div class="footer-links-title">Get in touch</div>
+                            <div class="footer-links">
+                                <p>Address Line Here</p>
+                                <p>Address Line Here</p>
+                                <p>Address Line Here</p>
+                                <p>Address Line Here</p>
+                                <a href="tel:01234567890"><p id="footer-phone">01234 567890</p></a>
+                                <a href="mailto:hello@qfcommerce.com"><p id="footer-email">hello@qfcommerce.com</p></a>
+                            </div>
+                        </div>
+    <!-- 
+                    <div class="footer-links"></div>
+                    <div class="footer-links"></div> -->
+            </div>
+            <div class="socials">
+                <div class="copyright">
+                        <p>&copy; QF Commerce 2022</p>
+                </div>
+                <div class="social-logos">
+                    <a href="#" class="social-logos-links">
+                            <i class="fa-brands fa-facebook fa-xl">
+                    </i></a>
+                    <a href="#" class="social-logos-links">
+                        <i class="fa-brands fa-instagram fa-xl">
+                            </i></a>
+                        <a href="#" class="social-logos-links">
+                            <i class="fa-brands fa-linkedin-in fa-xl">
+                        </i></a>
+                </div>
+            </div>
+            </footer>
+        </div>
+    </main>
 <!-- JavaScript files -->
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

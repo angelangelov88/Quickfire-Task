@@ -1,9 +1,28 @@
 @use '../abstracts/index' as *;
 
+.product-extra {
+    margin-top: 100px;
+    @media only screen and (min-width: $break-l) {
+        margin-top: 200px;
+    }
+}
+
 .product-extra-titles {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     list-style-type: none;
+    max-width: 90%;
+    padding-inline-start: 10px;
+    font-size: 14px;
+    @media only screen and (min-width: $break-s) {
+        flex-direction: row;
+    }
+
+    @media only screen and (min-width: $break-m) {
+        max-width: initial;
+        font-size: initial;
+    }
 }
 
 .product-extra-titles li:nth-child(2) {
@@ -12,12 +31,25 @@
     font-weight: 600;
 }
 
+.product-extra-titles li {
+    margin: 10px;
+}
+
 .product-extra-size-guide {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
     border: 1px red solid;
-    margin: 150px 0 150px 0;
+    margin: 0 0 100px 0;
     background-color: #F8F8F7;
+    @media only screen and (min-width: $break-l) {
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        margin: 150px 0 150px 0;
+
+    }
+
 }
 
 .product-size-text span {
@@ -34,14 +66,20 @@
 }
 
 .product-size-image img {
-    width: 500px;
-    height: 300px;
+    // width: 500px;
+    height: auto;
+    max-width: 250px;
+    @media only screen and (min-width: $break-m) {
+
+    max-width: 500px;
+    }
 }
 
 .other-products-container {
     margin-bottom: 150px;
     display: flex;
-    flex-direction: column;        
+    flex-direction: column;     
+
 }
 
 .other-products-container p {
@@ -52,14 +90,24 @@
 
 .other-products {
     display: flex;
-    justify-content: space-between;
+    overflow: auto;
+    flex-direction: column;
+    align-items: center;
+    @media only screen and (min-width: $break-l) {
+        justify-content: space-between;
+        flex-direction: row;
+    }
 }
 
 .other-product {
     border: 1px gainsboro solid;
-    max-width: 300px;
+    max-width: 250px;
     border-radius: 10px;
     padding-bottom: 10px;
+    margin: 15px;
+    @media only screen and (min-width: $break-s) {
+        max-width: 300px;
+    }
 }
 
 .other-products-title {
@@ -78,9 +126,12 @@
 
 .other-products-image img {
     border-radius: 10px;
-    width: 300px;
+    width: 250px;
     height: 250px;
+    @media only screen and (min-width: $break-s) {
+        width: 300px;
 
+    }
 }
 
 
