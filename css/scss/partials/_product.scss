@@ -203,16 +203,16 @@ h3 {
 #size-modal {
 	display: none;
 	position: absolute;
-	top: 928px;
+	top: 873px;
 	border: 2px black solid;
 	@media only screen and (min-width: $break-s) {
-		top: 905px;
+		top: 847px;
 }
 	@media only screen and (min-width: $break-m) {
-		top: 803px;
+		top: 749px;
 }
 	@media only screen and (min-width: $break-l) {
-		top: 274px;
+		top: 225px;
 }
 }
 
