@@ -1,5 +1,6 @@
 @use '../abstracts/index' as *;
 
+//I changed the flex direction for small screens so the newsletter fits the user screen
 .newsletter-container {
     background-color: $brand-color;
     margin-bottom: 150px;
@@ -8,17 +9,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-
     @media only screen and (min-width: $break-m) {
         flex-direction: row;
         height: 120px;
-
 }
 }
 
 .newsletter-text {
-
     color: white;
     margin: 0 40px;
     font-size: 18px;
@@ -26,10 +23,7 @@
     margin: 20px;
     @media only screen and (min-width: $break-l) {
         font-size: 23px;
-
-    }
-    
-    
+}    
 }
 
 .newsletter-input input{
@@ -41,12 +35,11 @@
     margin: 20px;
     @media only screen and (min-width: $break-xs) {
         width: 300px;
-    }
+}
 }
 
 .newsletter-input input:focus {
     outline: none;
-
 }
 
 #newsletter-arrow {

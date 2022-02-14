@@ -1,6 +1,6 @@
 @use '../abstracts/index' as *;
 
-
+//Styling for the header. I made it fixed so it is on top of anything on scrolling down
 header {
     display: flex;
     justify-content: space-around;
@@ -11,12 +11,11 @@ header {
     right: 0;        
     z-index: 100;
     background-color: #F8F8F7;
-
     @media only screen and (min-width: $break-l) {
         justify-content: space-between;
         margin: 0 0 20px 0;
         padding: 10px 50px 10px 50px;
-    }
+}
 }
 
 #header-logo img {
@@ -25,22 +24,16 @@ header {
     padding-top: 10px;
     @media only screen and (min-width: $break-s) {
         width: auto;
-    }
+}
 }
 
-#header-small {
-    display: block;
-    @media only screen and (min-width: $break-l) {
-        display: none;
-    }
-}
 
+//Display or not the hamburger menu depending on the screen size
 .btn-menu-xs {
     display: block;
     @media only screen and (min-width: $break-l) {
         display: none;
-    }
-
+}
 }
 
 #ul-header {
@@ -48,14 +41,14 @@ header {
     list-style-type: none;
     @media only screen and (min-width: $break-l) {
         display: flex;
-    }
-
+}
 }
 
 #ul-header li {
     padding:  0 17px 0 17px;
 }
 
+//I removed the padding associated with li elements to make sure I fill the screen as there was a small display issue just before the L breakpoint
 #ul-header li:last-child {
     padding-right: 0;
 }
@@ -73,62 +66,58 @@ header {
 }
 
 .li-header-1 {
-    // border: 1px blue solid;
     z-index: 0;
 }
 
+//This adds a transparent/gray background colour to the header on hover, so that it is visible even on white background below
 header:hover {
     background-color: rgba($color: #F0F0ED, $alpha: 0.8);
 }
 
+//This shows the drop down items on hover on each of the titles
 .li-header-1:hover {
     .dropdown-items-1 {
         display: block;
-    }
 }
-
+}
 
 .li-header-2:hover {
     .dropdown-items-2 {
         display: block;
-    }
 }
+}
+
 .li-header-3:hover {
     .dropdown-items-3 {
         display: block;
-    }
 }
+}
+
 .li-header-4:hover {
     .dropdown-items-4 {
         display: block;
-    }
 }
-
+}
 
 .dropdown-items-1, 
 .dropdown-items-2,
 .dropdown-items-3,
 .dropdown-items-4 {
     display: none;
-    // border: 1px red solid;
 }
 
 .header-icons {
     display: flex;
     @media only screen and (min-width: $break-l) {
         padding: 10px;
-    }
-
+}
 }
 
 .header-icons a {
     padding: 10px;
 }
 
-#me {
-    height: 100rem;
-}
-
+//This is the blocked div which shows when the hamburger menu is clicked and makes the rest of the page not accessible. I have added JS to make the user able to click anywhere on the blocker div to close the hamburger dropdown
 .blocker {
     display: none;
     position: fixed;
@@ -137,10 +126,10 @@ header:hover {
     bottom: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.6);
-  }
+}
   
-  //I added an extra html for the header for small screens. This one works only on small screens and change to display:none for bigger. This is basically the hamburger dropdown
-  #header-small {
+  //These are the submenu items for the hamburger menu on small screen. They would appear 
+#header-small {
     text-transform: uppercase;
     color: white;
     font-weight: 600;
@@ -161,54 +150,54 @@ header:hover {
     list-style-type: none;
     text-align: end;
     padding-right: 10px;
-  }
+}
   
-  //Separating the li elements on small screen (the drop down)
-  .li-header-small {
+//Separating the li elements on small screen (the drop down)
+.li-header-small {
     line-height: 45px;
-  }
+}
   
-  //Hamburger styling
-  .btn-menu-xs {
+//Hamburger styling
+.btn-menu-xs {
     background-color: $brand-color;
     height: 55px;
     width: 65px;
     border-radius: 4px;
     z-index: 1;
     @media only screen and (min-width: $break-l) {
-      display: none;
-  }
-  }
+        display: none;
+}
+}
   
-  .btn-menu-xs:hover {
+.btn-menu-xs:hover {
     background-color: $brand-color;
     cursor: pointer;
-  }
+}
   
   // The next few properties are for the hamburger
-  .menu-lines {
+.menu-lines {
     padding: 10px 0 4px 16px;
-  }
+}
   
-  .menu-x {
+.menu-x {
     display: none;
     color: white;
     font-size: 40px;
     margin-top: 0px;
     margin-left: 21px;
-  }
+}
   
-  .menu-line {
+.menu-line {
     width: 33px;
     height: 3px;
     background-color: white;
     margin-bottom: 5px;
-  }
+}
   
-  .menu-title {
+.menu-title {
     font-size: 12px;
     text-align: center;
     margin-top: -7px;
     color: white;
     font-weight: 600;
-  }
+}

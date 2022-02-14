@@ -1,6 +1,6 @@
 @use '../abstracts/index' as *;
 
-
+//I show the footer links next to each other for big screens and in column for small ones
 .footer-links-container {
     display: flex;
     flex-direction: column;
@@ -8,8 +8,7 @@
     @media only screen and (min-width: $break-m) {
         justify-content: space-around;
         flex-direction: row;
-
-    }
+}
 }
 
 .footer-links {
@@ -17,11 +16,18 @@
     flex-direction: column;
     flex-wrap: nowrap;
     line-height: 25px;
+    padding-inline-start: 0;
+    font-size: 15px;
+    @media only screen and (min-width: $break-m) {
+        font-size: 13px;
+}
 }
 
+.footer-links a:hover {
+    text-decoration: underline;
+}
 
 .footer-links p {
-
     line-height: 5px;
 }
 
@@ -29,24 +35,12 @@
     font-size: 19px;
     margin-bottom: 10px;
     margin-top: 25px;
-
     @media only screen and (min-width: $break-m) {
         font-size: 17px;
         margin-bottom: 60px;
         margin-top: 0;
-
-    }
-
 }
-
-.footer-links {
-    padding-inline-start: 0;
-    font-size: 15px;
-    @media only screen and (min-width: $break-m) {
-        font-size: 13px;
-    }
 }
-
 
 #footer-phone {
     font-weight: 600;

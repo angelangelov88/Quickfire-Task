@@ -1,5 +1,6 @@
 @use '../abstracts/index' as *;
 
+//This is the breadcrumb container
 .page-name-container {
 	margin: 50px 0 20px 30px;
 }
@@ -8,17 +9,14 @@
 	text-decoration: underline;
 }
 
+//This is the jQuery slider styles that are outside of its native ones
 .js .slider-single > div:nth-child(1n+2) { display: none }
 
 .js .slider-single.slick-initialized > div:nth-child(1n+2) { display: block }
 
 h3 {
-	background: #f0f0f0;
-	color: #3498db;
 	font-size: 10px;
 	width: 50px;
-	//  margin: 5rem;
-	// padding: 2%;
 	position: relative;
 	text-align: center;
 }
@@ -27,19 +25,18 @@ h3 {
 	line-height: 10rem;
 	width: 600px;
 	height: 400px;
-
 }
 
 .slider-single {
 	width: auto;
 	height: auto;
 	@media only screen and (min-width: $break-m) {
-
-	width: 600px;
-    height: 400px;
+		width: 600px;
+		height: 400px;
 }
 }
 
+//This is the styling for the countdown div
 #countdown {
 	position: absolute;
 	top: 10px;
@@ -47,25 +44,18 @@ h3 {
 	z-index: 1;
 	padding: 10px;
 	text-align: center;
-	// width: 480px;
 	@media only screen and (min-width: $break-m) {
-		// max-width: 580px;
 		width: 560px;
-
-	}
+}
 }
 
 .slick-slider {
-	// margin-right: auto;
-    // margin-left: auto;
-	// max-width: 80%;
-	// width: auto;
-	// height: auto;
 	@media only screen and (min-width: $break-m) {
 		max-width: 580px;
-	}
+}
 }
 
+//Styling for the magnifying glass icon
 .magnifying-glass {
 	position: absolute;
 	bottom: 20%;
@@ -74,10 +64,8 @@ h3 {
 	padding: 12px 15px;
 	border-radius: 50%;
 	background-color: rgba($color: gainsboro, $alpha: .5);
-
 	@media only screen and (min-width: $break-m) {
 		left: 90%;
-
 }
 }
 
@@ -96,32 +84,27 @@ h3 {
 
 .slider-nav .slick-slide { 
 	cursor: pointer; 
-	// width: 100px;
-	// height: 100px;
 }
+
 .slider-nav {
 	margin-top: 35px;
-
 	@media only screen and (min-width: $break-l) {
-
-	//  width: 400px;
-	 height: 200px;
-	}
+	 	height: 200px;
+}
 }
 
 .slick-slide.is-active h3 {
 	color: #c00;
 	background-color: #fff
-
 }
 
 .slick-slide {
 	width: 100px;
 	height: 100px;
 }
+
 .slider-nav img {
 	width: 100px;
-	// height: 100px;
 }
 
 .slick-prev,
@@ -129,7 +112,7 @@ h3 {
 	display: none !important;
 	@media only screen and (min-width: $break-s) {
 		display: block !important;
-	}
+}
 }
 
 .slick-arrow {
@@ -153,7 +136,6 @@ h3 {
 	margin-right: auto;
     margin-left: auto;
 	max-width: 250px;
-	border: 1px red solid;
 	width: auto;
 	height: 500px;
 	@media only screen and (min-width: $break-m) {
@@ -161,18 +143,15 @@ h3 {
 }
 }
 
-
 .product-details {
 	margin-right: auto;
     margin-left: auto;
-	// min-width: 600px;
 	padding-left: 10px;
 	@media only screen and (min-width: $break-l) {
 		margin-left: 50px;
 		margin-right: initial;
 		min-width: initial;
 }
-
 }
 
 .product-name {
@@ -193,15 +172,12 @@ h3 {
 }
 
 .product-price-crossed {
-	position: relative;
-	top: -22px;
 	text-decoration: line-through;
 	color: rgb(216, 212, 212);
-
 	@media only screen and (min-width: $break-m) {
-		left: 130px;
-
-	
+		position: relative;
+		top: -32px;
+		left: 130px;	
 }
 }
 
@@ -223,34 +199,35 @@ h3 {
 	margin-top: 20px;
 }
 
+//Styling for the modal that shows up on click
 #size-modal {
 	display: none;
 	position: absolute;
-	top: 960px;
+	top: 928px;
 	border: 2px black solid;
 	@media only screen and (min-width: $break-s) {
-		top: 930px;
-	}
+		top: 905px;
+}
 	@media only screen and (min-width: $break-m) {
-		top: 827px;
-	}
+		top: 803px;
+}
 	@media only screen and (min-width: $break-l) {
-		top: 310px;
+		top: 274px;
 }
 }
 
+//Size of the image shown. I have changed the size so that it does not go out of the viewport
 #size-modal img {
 	width: 250px;
 	@media only screen and (min-width: $break-s) {
 		width: 300px;
-	}
+}
 	@media only screen and (min-width: $break-m) {
 		width: initial;
-	}
-
+}
 }
 
-.basket-button {
+#basket-button {
 	color: white;
 	background-color: $brand-color;
 	padding: 15px;
@@ -260,4 +237,5 @@ h3 {
 	font-weight: 600;
 	margin-top: 20px;
 	max-width: 200px;
+	cursor: pointer;
 }

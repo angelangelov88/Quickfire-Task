@@ -9,14 +9,10 @@
     <link rel="stylesheet" href="css/style.css"/>
 <!-- Added Font Awesome CDN to show the arrow on the buttons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
-
-
-
+<!-- The styles for the jQuery plugins I used -->
     <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
     <link rel="stylesheet" href="./css/magnify.css"/>
-
-
     <title>Q Commerce</title>
 </head>
 <body>
@@ -24,6 +20,8 @@
         <a href="#" id="header-logo">
             <img src="./assets/images/logo.PNG" alt="logo">
         </a>
+
+<!-- This is the header content - menu items and dropdown items on hover -->
         <ul id="ul-header">
             <li class="li-header li-header-1">
                 <a href="#">Menu Item 1 &nbsp;
@@ -66,6 +64,8 @@
                 </a>
             </li>
         </ul>
+
+<!-- I have added the icons as a separate div to make them appear on the right side on big screen -->
         <div class="header-icons">
             <a href="#" class="header-account">
                 <i class="fa-solid fa-user fa-xl"></i>
@@ -75,10 +75,10 @@
             </a>
         </div>
 
-        <!-- I added the blocker div to allow the user click anywhere in order to close the hamburger dropdown when shows on small screens -->
+<!-- I added the blocker div to allow the user click anywhere in order to close the hamburger dropdown when shows on small screens -->
         <div class="blocker" onclick="openCloseNav()"></div>
 
-      <!-- Extra code for the drop down hamburger menu on small screen sizes -->
+<!-- Code for the drop down hamburger menu on small screen sizes -->
         <div id="header-small">
             <ul>
             <li class="li-header-small">
@@ -103,7 +103,7 @@
             </ul>
         </div>
       
-      <!-- Hamburger menu itself -->
+<!-- Hamburger menu itself -->
         <div class="btn-menu-xs" onclick="openCloseNav()">
             <div class="menu-lines">
                 <div class="menu-line"></div>
@@ -115,12 +115,15 @@
         </div>
     </header>
     <main>
+<!-- I have added a main-container div to keep the content in a div which I have styled -->
         <div class="main-container">
             <div class="page-name-container">
                 <p class="page-name">
                     <a href="#">Breadcrumb > Breadcrumb</a>
                 </p>
             </div>
+
+<!-- This is where my hero image starts. I have added the main images. The part after data-magnify is a big size image to zoom on hover with the magnify JS plugin -->
             <div class="hero-container">
                 <div class="hero-image">
                     <div id="countdown"></div>
@@ -141,6 +144,7 @@
                             <img src="./assets/images/image4.jpg"  data-magnify="./assets/images/image4-big.jpg" alt="couch-image-4" class="magnified-image">
                         </h3></div>
                     </div>
+<!-- These are the images used for the thumbnails -->
                     <div class="slider slider-nav">
                         <div><h3><span>
                             <img src="./assets/images/image1.jpg" alt="couch-image-1">
@@ -156,13 +160,14 @@
                         </span></h3></div>
                     </div>
                 </div>
+
+<!-- I have added a separate div for the second part of the products - product-details. I keep it on the right side for big screens and change the flex-direction to column for smaller screen sizes -->
                 <div class="product-details">
                     <p class="product-name">Montreal Leather Sofa&nbsp;&nbsp;
                         <a href="#"><i class="fa-solid fa-heart fa-xs"></i></a>
                     </p>
-                    <div class="product-price">£649.00
+                    <div class="product-price">£649.00</div>
                         <p class="product-price-crossed">£949.00</p>
-                    </div>
                     <div class="product-colour-container">
                         <img src="./assets/images/Group-13.png"  alt="poduct-colours">
                     </div>
@@ -179,9 +184,13 @@
                             </p>
                         </div>
                     </div>
-                    <div class="basket-button">Add to Basket</div>
+
+<!-- This is the Add to Basket button. I have added a function addToBasket() which will change the text of the button as well as alert that item has been added. However, I have not implemented size and colour in here -->
+                    <div id="basket-button" onclick="addToBasket()">Add to Basket</div>
                 </div>
             </div>
+
+<!-- This is the next stage which I called product-extra and it shows 4 different options the user should be able to select. I have created only the Size Guide currently -->
             <div class="product-extra">
                 <ul class="product-extra-titles">
                     <li><a href="#">Product Description</a></li>
@@ -206,6 +215,8 @@
                 <div class="product-extra-delivery"></div>
                 <div class="product-extra-reviews"></div>
             </div>
+
+<!-- This is the next section where other products are displayed to the user. I have used same image and lorem ipsum text to display them. I display them all together for big screen and again flex-direction: column for small screens -->
             <div class="other-products-container">
                 <p>You might be also interested in...</p>
                 <div class="other-products">
@@ -243,6 +254,8 @@
                     </div>
                 </div>
             </div>
+
+<!-- This is the newsletter part. I have added some interactivity - HTML5 email validation, required field and alertFunction() on submit. -->
             <div>
                 <form onsubmit="alertFunction()" class="newsletter-container">
                     <div class="newsletter-text">Get 10% off. Sign up today.</div>
@@ -254,90 +267,88 @@
                     </div>
                 </form>
             </div>
-        <footer>
-            <div class="footer-links-container">
+        
+<!-- The footer starts here. I have divided it in 2 main divs - the footer container and the socials. The first one is further divided in 5 divs. -->
+            <footer>
+                <div class="footer-links-container">
                     <a href="#" class="footer-logo">
                         <img src="./assets/images/footer-logo.PNG" alt="footer-logo">
                     </a>
-
-                        <div class="footer-link-container">
-                            <div class="footer-links-title">QF Commerce</div>
-                            <div class="footer-links">
-                                <a href="#">New Releases</a>
-                                <a href="#">Shop All</a>
-                                <a href="#">Shop by Filter</a>
-                                <a href="#">Lorem Ipsum</a>
-                                <a href="#">Lorem Ipsum</a>
-                                <a href="#">Lorem Ipsum</a>
-                                <a href="#">Lorem Ipsum</a>                      
-                            </div>
+                    <div class="footer-link-container">
+                        <div class="footer-links-title">QF Commerce</div>
+                        <div class="footer-links">
+                            <a href="#">New Releases</a>
+                            <a href="#">Shop All</a>
+                            <a href="#">Shop by Filter</a>
+                            <a href="#">Lorem Ipsum</a>
+                            <a href="#">Lorem Ipsum</a>
+                            <a href="#">Lorem Ipsum</a>
+                            <a href="#">Lorem Ipsum</a>                      
                         </div>
-                        <div class="footer-link-container">
-                            <div class="footer-links-title">Information</div>
-                            <div class="footer-links">
-                                <a href="#">Lorem Ipsum</a>
-                                <a href="#">Lorem Ipsum</a>
-                                <a href="#">Contact Us</a>
-                                <a href="#">About Us</a>
-                                <a href="#">Careers</a>
-                                <a href="#">Lorem Ipsum</a>
-                            </div>
+                    </div>
+                    <div class="footer-link-container">
+                        <div class="footer-links-title">Information</div>
+                        <div class="footer-links">
+                            <a href="#">Lorem Ipsum</a>
+                            <a href="#">Lorem Ipsum</a>
+                            <a href="#">Contact Us</a>
+                            <a href="#">About Us</a>
+                            <a href="#">Careers</a>
+                            <a href="#">Lorem Ipsum</a>
                         </div>
-
-                        <div class="footer-link-container">
-                            <div class="footer-links-title">Important</div>
-                            <div class="footer-links">
-                                <a href="#">Delivery & Returns</a>
-                                <a href="#">Cookie Policy</a>
-                                <a href="#">Privacy Policy</a>
-                                <a href="#">Terms & Conditions</a>
-                                <a href="#">Sitemap</a>
-                            </div>
+                    </div>
+                    <div class="footer-link-container">
+                        <div class="footer-links-title">Important</div>
+                        <div class="footer-links">
+                            <a href="#">Delivery & Returns</a>
+                            <a href="#">Cookie Policy</a>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms & Conditions</a>
+                            <a href="#">Sitemap</a>
                         </div>
-                        <div class="footer-link-container">
-                            <div class="footer-links-title">Get in touch</div>
-                            <div class="footer-links">
-                                <p>Address Line Here</p>
-                                <p>Address Line Here</p>
-                                <p>Address Line Here</p>
-                                <p>Address Line Here</p>
-                                <a href="tel:01234567890"><p id="footer-phone">01234 567890</p></a>
-                                <a href="mailto:hello@qfcommerce.com"><p id="footer-email">hello@qfcommerce.com</p></a>
-                            </div>
+                    </div>
+                    <div class="footer-link-container">
+                        <div class="footer-links-title">Get in touch</div>
+                        <div class="footer-links">
+                            <p>Address Line Here</p>
+                            <p>Address Line Here</p>
+                            <p>Address Line Here</p>
+                            <p>Address Line Here</p>
+                            <a href="tel:01234567890"><p id="footer-phone">01234 567890</p></a>
+                            <a href="mailto:hello@qfcommerce.com"><p id="footer-email">hello@qfcommerce.com</p></a>
                         </div>
-    <!-- 
-                    <div class="footer-links"></div>
-                    <div class="footer-links"></div> -->
-            </div>
-            <div class="socials">
-                <div class="copyright">
+                    </div>
+                </div>
+                <div class="socials">
+                    <div class="copyright">
                         <p>&copy; QF Commerce 2022</p>
-                </div>
-                <div class="social-logos">
-                    <a href="#" class="social-logos-links">
-                            <i class="fa-brands fa-facebook fa-xl">
-                    </i></a>
-                    <a href="#" class="social-logos-links">
-                        <i class="fa-brands fa-instagram fa-xl">
-                            </i></a>
+                    </div>
+                    <div class="social-logos">
                         <a href="#" class="social-logos-links">
-                            <i class="fa-brands fa-linkedin-in fa-xl">
+                                <i class="fa-brands fa-facebook fa-xl">
                         </i></a>
+                        <a href="#" class="social-logos-links">
+                            <i class="fa-brands fa-instagram fa-xl">
+                                </i></a>
+                            <a href="#" class="social-logos-links">
+                                <i class="fa-brands fa-linkedin-in fa-xl">
+                            </i></a>
+                    </div>
                 </div>
-            </div>
             </footer>
         </div>
     </main>
-<!-- JavaScript files -->
 
+<!-- JavaScript files -->
+<!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  
+<!-- jQuery plugins JS files -->
   <script src="assets/JS/slick.min.js"></script>
 
   <script src="assets/JS/custom.js"></script> 
 
   <script src="assets/JS/magnify.js"></script> 
-  
+<!-- Main JS file -->
   <script src="assets/JS/main.js"></script>
 
 </body>

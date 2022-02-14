@@ -15,7 +15,6 @@ a {
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
-  border: 1px red solid;
 }
 @media only screen and (min-width: 1260px) {
   .main-container {
@@ -50,15 +49,6 @@ header {
 @media only screen and (min-width: 576px) {
   #header-logo img {
     width: auto;
-  }
-}
-
-#header-small {
-  display: block;
-}
-@media only screen and (min-width: 992px) {
-  #header-small {
-    display: none;
   }
 }
 
@@ -143,10 +133,6 @@ header:hover {
 
 .header-icons a {
   padding: 10px;
-}
-
-#me {
-  height: 100rem;
 }
 
 .blocker {
@@ -249,8 +235,6 @@ header:hover {
 }
 
 h3 {
-  background: #f0f0f0;
-  color: #3498db;
   font-size: 10px;
   width: 50px;
   position: relative;
@@ -383,7 +367,6 @@ h3 {
   margin-right: auto;
   margin-left: auto;
   max-width: 250px;
-  border: 1px red solid;
   width: auto;
   height: 500px;
 }
@@ -424,13 +407,13 @@ h3 {
 }
 
 .product-price-crossed {
-  position: relative;
-  top: -22px;
   text-decoration: line-through;
   color: #d8d4d4;
 }
 @media only screen and (min-width: 768px) {
   .product-price-crossed {
+    position: relative;
+    top: -32px;
     left: 130px;
   }
 }
@@ -456,22 +439,22 @@ h3 {
 #size-modal {
   display: none;
   position: absolute;
-  top: 960px;
+  top: 928px;
   border: 2px black solid;
 }
 @media only screen and (min-width: 576px) {
   #size-modal {
-    top: 930px;
+    top: 905px;
   }
 }
 @media only screen and (min-width: 768px) {
   #size-modal {
-    top: 827px;
+    top: 803px;
   }
 }
 @media only screen and (min-width: 992px) {
   #size-modal {
-    top: 310px;
+    top: 274px;
   }
 }
 
@@ -489,7 +472,7 @@ h3 {
   }
 }
 
-.basket-button {
+#basket-button {
   color: white;
   background-color: #141414;
   padding: 15px;
@@ -499,6 +482,7 @@ h3 {
   font-weight: 600;
   margin-top: 20px;
   max-width: 200px;
+  cursor: pointer;
 }
 
 .product-extra {
@@ -546,7 +530,6 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px red solid;
   margin: 0 0 100px 0;
   background-color: #F8F8F7;
 }
@@ -728,6 +711,18 @@ h3 {
   flex-direction: column;
   flex-wrap: nowrap;
   line-height: 25px;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  font-size: 15px;
+}
+@media only screen and (min-width: 768px) {
+  .footer-links {
+    font-size: 13px;
+  }
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
 
 .footer-links p {
@@ -744,17 +739,6 @@ h3 {
     font-size: 17px;
     margin-bottom: 60px;
     margin-top: 0;
-  }
-}
-
-.footer-links {
-  -webkit-padding-start: 0;
-          padding-inline-start: 0;
-  font-size: 15px;
-}
-@media only screen and (min-width: 768px) {
-  .footer-links {
-    font-size: 13px;
   }
 }
 

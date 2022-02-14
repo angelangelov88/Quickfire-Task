@@ -71,7 +71,7 @@ function updateTimer() {
     var m = Math.floor((leftTime - (h * 3600)) / 60);
     var s = Math.floor(leftTime % 60);
 
-
+//I added this part to evaluate the output and if single digits are displayed to add a 0 upfront
     h = (h < 10) ? "0" + h: h;
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
@@ -86,9 +86,6 @@ function updateTimer() {
 
     leftTime--;
 }
-
-
-
 
 //Function to open the size guide
 const sizeModal = document.getElementById('size-modal')
@@ -105,11 +102,7 @@ function openCloseModal() {
   }
 }
 
-
-
-
 //Magnifying glass
-
 $(document).ready(function() {
   $('.magnified-image').magnify();
 });
@@ -121,10 +114,18 @@ $(document).ready(function() {
 });
 
 
-//form
+//Form submit/alert function. I alert that user has signed up after HTML5 email has been checked and they click on the arrow to submit
+inputEmail = document.getElementById('input-email')
 
 function alertFunction() {
-  document.getElementById('input-email').value = ''
+  inputEmail.value = ''
   alert('Congrats! You have signed up for our newsletter')
 }
 
+//Add to basket function. I just alert user when the button is clicked and change the button text
+basketButton = document.getElementById('basket-button')
+
+function addToBasket() {
+  alert('Added to basket')
+  basketButton.innerHTML = 'Added'
+}

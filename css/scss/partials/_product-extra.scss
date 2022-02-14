@@ -1,10 +1,11 @@
 @use '../abstracts/index' as *;
 
+//These are the styles for the product-extra content (the titles of the different sections available)
 .product-extra {
     margin-top: 100px;
     @media only screen and (min-width: $break-l) {
         margin-top: 200px;
-    }
+}
 }
 
 .product-extra-titles {
@@ -17,12 +18,11 @@
     font-size: 14px;
     @media only screen and (min-width: $break-s) {
         flex-direction: row;
-    }
-
+}
     @media only screen and (min-width: $break-m) {
         max-width: initial;
         font-size: initial;
-    }
+}
 }
 
 .product-extra-titles li:nth-child(2) {
@@ -39,17 +39,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px red solid;
     margin: 0 0 100px 0;
     background-color: #F8F8F7;
     @media only screen and (min-width: $break-l) {
         flex-direction: row;
         justify-content: space-evenly;
-
         margin: 150px 0 150px 0;
-
-    }
-
+}
 }
 
 .product-size-text span {
@@ -58,28 +54,27 @@
     padding: 7px 10px;
     border-radius: 50%;
     margin-right: 30px;
-
 }
 
 .product-size-text p {
     margin: 35px 0 35px 0;
 }
 
+//I have decreased the width of the image in order to make it appear and look nice on small screen
 .product-size-image img {
-    // width: 500px;
     height: auto;
     max-width: 250px;
     @media only screen and (min-width: $break-m) {
-
-    max-width: 500px;
-    }
+        max-width: 500px;
+}
 }
 
+
+//This is the next part of the page - showing different products the user can be interested in
 .other-products-container {
     margin-bottom: 150px;
     display: flex;
     flex-direction: column;     
-
 }
 
 .other-products-container p {
@@ -96,7 +91,7 @@
     @media only screen and (min-width: $break-l) {
         justify-content: space-between;
         flex-direction: row;
-    }
+}
 }
 
 .other-product {
@@ -107,7 +102,7 @@
     margin: 15px;
     @media only screen and (min-width: $break-s) {
         max-width: 300px;
-    }
+}
 }
 
 .other-products-title {
@@ -120,8 +115,6 @@
     font-weight: 600;
     margin: 20px;
     font-size: 20px;
-
-
 }
 
 .other-products-image img {
@@ -130,10 +123,8 @@
     height: 250px;
     @media only screen and (min-width: $break-s) {
         width: 300px;
-
-    }
 }
-
+}
 
 .other-products-button {
     background-color: #F0F0ED;
